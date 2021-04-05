@@ -4,9 +4,6 @@
 
 module ReliabilityAwareImaging
 
-using DrWatson
-import Pkg; Pkg.instantiate()
-
 using Flux
 using JOLI
 using JLD2

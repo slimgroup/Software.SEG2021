@@ -5,9 +5,6 @@
 
 module WavefieldRecoveryUQ
 
-using DrWatson
-import Pkg; Pkg.instantiate()
-
 using Random
 using HDF5
 using DataFrames
