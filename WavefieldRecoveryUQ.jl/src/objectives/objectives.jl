@@ -3,6 +3,7 @@
 # Copyright: Georgia Institute of Technology, 2020
 
 export loss_supervised
+using CUDA
 
 function loss_supervised(
     Net::NetworkConditionalHINT, X::AbstractArray{Float32,4}, Y::AbstractArray{Float32,4}
@@ -15,6 +16,7 @@ function loss_supervised(
 
     ΔZ = -gradlogpdf(0f0, 1f0, tensor_cat(Zx, Zy))/z_size[4]
     ΔZx, ΔZy = tensor_split(ΔZ)
+    CUDA.reclaim()
     ΔX, ΔY = Net.backward(ΔZx, ΔZy, Zx, Zy)[1:2]
 
     GC.gc()

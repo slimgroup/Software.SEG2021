@@ -13,11 +13,15 @@ using Distributions
 using Statistics
 using InvertibleNetworks
 using PyPlot: Figure
+using CUDA
 
 import DrWatson: _wsave
 import Distributions: logpdf, gradlogpdf
 import Base.getindex
 import Base.*
+
+# Network
+include("./network/put_param.jl")
 
 # Utilities
 include("./utils/load_experiment.jl")

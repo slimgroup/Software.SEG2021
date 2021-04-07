@@ -354,12 +354,12 @@ uuid = "41ab1584-1d38-5bbf-9106-f11c6c58b48f"
 version = "1.0.0"
 
 [[InvertibleNetworks]]
-deps = ["CUDA", "Flux", "LinearAlgebra", "NNlib", "Random", "Statistics", "Test", "Wavelets", "Zygote"]
-git-tree-sha1 = "718d03cda02661a2e46ff533971baf8d971faa85"
-repo-rev = "9f56b68"
+deps = ["CUDA", "ChainRulesCore", "Flux", "JOLI", "LinearAlgebra", "NNlib", "Random", "Statistics", "Test", "Wavelets", "Zygote"]
+git-tree-sha1 = "ae064e493670e8f3799efe2069b9cb7ba24574b8"
+repo-rev = "master"
 repo-url = "https://github.com/slimgroup/InvertibleNetworks.jl"
 uuid = "b7115f24-5f92-4794-81e8-23b0ddb121d3"
-version = "0.1.0"
+version = "2.0.0"
 
 [[IterTools]]
 git-tree-sha1 = "05110a2ab1fc5f932622ffea2a003221f4782c18"

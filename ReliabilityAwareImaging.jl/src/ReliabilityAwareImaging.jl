@@ -14,9 +14,13 @@ using LinearAlgebra
 using Distributions
 using Statistics
 using InvertibleNetworks
+using CUDA
 
 import Base.getindex
 import Distributions: logpdf, gradlogpdf
+
+# Network
+include("./network/put_param.jl")
 
 # Utilities
 include("./utils/load_experiment.jl")

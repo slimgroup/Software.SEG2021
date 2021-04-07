@@ -102,9 +102,7 @@ n_in = Int(nc*4)
 
 
 # Create network
-CH = NetworkConditionalHINT(
-    nx, ny, n_in, batchsize, n_hidden, depth, k1=3, k2=3, p1=1, p2=1
-) |> gpu
+CH = NetworkConditionalHINT(n_in, n_hidden, depth, k1=3, k2=3, p1=1, p2=1) |> gpu
 
 X = wavelet_squeeze(X_train[:, :, :, 1:64]) |> gpu
 Y = wavelet_squeeze(Y_train[:, :, :, 1:64]) |> gpu
@@ -124,7 +122,6 @@ p = Progress(num_batches*max_epoch)
 
 for epoch=1:max_epoch
     for (itr, idx) in enumerate(train_loader)
-        Base.flush(Base.stdout)
 
         # Apply wavelet squeeze (change dimensions to -> n1/2 x n2/2 x nc*4 x ntrain)
         X = wavelet_squeeze(X_train[:, :, :, idx])
