@@ -14,3 +14,6 @@ Learning by example: fast reliability-aware seismic imaging with normalizing flo
 * [WavefieldRecoveryUQ.jl](https://github.com/slimgroup/Software.SEG2021/tree/main/WavefieldRecoveryUQ.jl):
 Enabling uncertainty quantification for seismic data pre-processing using normalizing flows (NF)—an interpolation example
 
+* [WorkflowWLRLand.jl](https://github.com/slimgroup/Software.SEG2021/tree/main/WorkflowWLRLand.jl):
+A practical workflow for land seismic wavefield recovery with weighted matrix factorization
+
