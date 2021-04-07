@@ -19,9 +19,6 @@ import Distributions: logpdf, gradlogpdf
 import Base.getindex
 import Base.*
 
-# Network utils
-include("./network/put_param.jl")
-
 # Utilities
 include("./utils/load_experiment.jl")
 include("./utils/data_loader.jl")

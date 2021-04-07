@@ -102,7 +102,9 @@ n_in = Int(nc*4)
 
 
 # Create network
-CH = NetworkConditionalHINT(n_in, n_hidden, depth, k1=3, k2=3, p1=1, p2=1) |> gpu
+CH = NetworkConditionalHINT(
+    nx, ny, n_in, batchsize, n_hidden, depth, k1=3, k2=3, p1=1, p2=1
+) |> gpu
 
 X = wavelet_squeeze(X_train[:, :, :, 1:64]) |> gpu
 Y = wavelet_squeeze(Y_train[:, :, :, 1:64]) |> gpu

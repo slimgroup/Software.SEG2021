@@ -109,7 +109,9 @@ h5open(data_path, "r") do file
 end
 
 # Create network
-CH = NetworkConditionalHINT(nc, n_hidden, depth, k1=3, k2=3, p1=1, p2=1) |> gpu
+CH = NetworkConditionalHINT(
+    nx, ny, nc, batchsize, n_hidden, depth, k1=3, k2=3, p1=1, p2=1
+) |> gpu
 
 # Training
 # Batch extractor
