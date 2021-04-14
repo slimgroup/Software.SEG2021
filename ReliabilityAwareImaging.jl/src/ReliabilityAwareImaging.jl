@@ -4,6 +4,7 @@
 
 module ReliabilityAwareImaging
 
+using DrWatson
 using Flux
 using JOLI
 using JLD2

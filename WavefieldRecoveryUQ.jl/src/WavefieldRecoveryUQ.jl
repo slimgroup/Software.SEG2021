@@ -5,6 +5,7 @@
 
 module WavefieldRecoveryUQ
 
+using DrWatson
 using Random
 using HDF5
 using DataFrames
