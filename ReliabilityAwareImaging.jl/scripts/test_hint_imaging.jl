@@ -113,7 +113,10 @@ ny = Int(ny/2)
 n_in = Int(nc*4)
 
 # Create network
-CH = NetworkConditionalHINT(n_in, n_hidden, depth, k1=3, k2=3, p1=1, p2=1)
+CH = NetworkConditionalHINT(
+    nx, ny, n_in, batchsize, n_hidden, depth, k1=3, k2=3, p1=1, p2=1
+)
+
 
 # Loading the experiment—only network weights and training loss
 Params, fval, exp_path = load_experiment(parsed_args; return_path=true)

@@ -5,6 +5,7 @@
 
 module WavefieldRecoveryUQ
 
+using DrWatson
 using Random
 using HDF5
 using DataFrames
@@ -18,9 +19,6 @@ import DrWatson: _wsave
 import Distributions: logpdf, gradlogpdf
 import Base.getindex
 import Base.*
-
-# Network utils
-include("./network/put_param.jl")
 
 # Utilities
 include("./utils/load_experiment.jl")

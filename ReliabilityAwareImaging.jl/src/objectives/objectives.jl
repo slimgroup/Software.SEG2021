@@ -9,14 +9,16 @@ function loss_supervised(
 )
 
     Zx, Zy, logdet = Net.forward(X, Y)
+    z_size = size(Zx)
 
-    z_size = size(tensor_cat(Zx, Zy))
-    f = sum(logpdf(0f0, 1f0, tensor_cat(Zx, Zy))) + logdet*z_size[4]
+    f = sum(logpdf(0f0, 1f0, Zx))
+    f = f + sum(logpdf(0f0, 1f0, Zy))
+    f = f + logdet*z_size[4]
 
-    ΔZ = -gradlogpdf(0f0, 1f0, tensor_cat(Zx, Zy))/z_size[4]
-    ΔZx, ΔZy = tensor_split(ΔZ)
+    ΔZx = -gradlogpdf(0f0, 1f0, Zx)/z_size[4]
+    ΔZy = -gradlogpdf(0f0, 1f0, Zy)/z_size[4]
+
     ΔX, ΔY = Net.backward(ΔZx, ΔZy, Zx, Zy)[1:2]
-
     GC.gc()
 
     return -f/z_size[4], ΔX, ΔY
