@@ -13,7 +13,7 @@ git clone https://github.com/slimgroup/Software.SEG2021
 cd Software.SEG2021/BGTimeLapseCCS.jl/
 ```
 
-To reproduce the examples, first install [Julia](https://julialang.org/downloads/) and [Python](https://www.python.org/downloads/). A Julia version ``\leq 1.3`` is currently suggested by developers of [FwiFlow](https://github.com/lidongzh/FwiFlow.jl).
+To reproduce the examples, first install [Julia](https://julialang.org/downloads/) and [Python](https://www.python.org/downloads/). A Julia version <= 1.3 is currently suggested by developers of [FwiFlow](https://github.com/lidongzh/FwiFlow.jl).
 
 Next, install python packages [Devito](https://www.devitoproject.org) and [matplotlib](https://matplotlib.org) through
 
