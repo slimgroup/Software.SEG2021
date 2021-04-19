@@ -4,7 +4,8 @@
 
 using DrWatson
 @quickactivate "BGTimeLapseCCS"
-using JLD2, FFTW, DSP
+using TimeProbeSeismic
+using JLD2, FFTW, DSP, PyPlot, Images
 
 import Base.*
 

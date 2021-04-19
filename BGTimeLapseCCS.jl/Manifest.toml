@@ -899,6 +899,14 @@ git-tree-sha1 = "52c5f816857bfb3291c7d25420b1f4aca0a74d18"
 uuid = "06e1c1a7-607b-532d-9fad-de7d9aa2abac"
 version = "0.3.0"
 
+[[TimeProbeSeismic]]
+deps = ["Distributed", "DrWatson", "HDF5", "Images", "JOLI", "JUDI", "LinearAlgebra", "Printf", "PyCall", "PyPlot", "Random", "Reexport", "SegyIO", "Serialization", "SlimOptim", "Statistics"]
+git-tree-sha1 = "94541df2cb627eb549761f8940d54de4cd0d2db3"
+repo-rev = "master"
+repo-url = "https://github.com/slimgroup/TimeProbeSeismic.jl.git"
+uuid = "cd417b76-fc6b-4228-be91-94f5ea77264b"
+version = "0.1.0"
+
 [[TimeZones]]
 deps = ["Dates", "EzXML", "Mocking", "Pkg", "Printf", "RecipesBase", "Serialization", "Unicode"]
 git-tree-sha1 = "4ba8a9579a243400db412b50300cd61d7447e583"

@@ -3,6 +3,7 @@
 
 using DrWatson
 @quickactivate "BGTimeLapseCCS"
+using TimeProbeSeismic
 using JLD2, FFTW, DSP, PyPlot, Images
 
 JLD2.@load "../model/bgTimeLapse.jld2"
