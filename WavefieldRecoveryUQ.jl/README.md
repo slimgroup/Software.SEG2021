@@ -39,6 +39,22 @@ To perform conditional (posterior) sampling via the pretrained normalizing flow 
 $ julia scripts/test_hint_interpolation.jl
 ```
 
+## Citation
+
+If you find the code in this repository useful in your research, please cite:
+
+
+```bibtex
+@unpublished {siahkoohi2021SEGlbe,
+    title = {Enabling uncertainty quantification for seismic data pre-processing using normalizing flows (NF){\textemdash}an interpolation example},
+    year = {2021},
+    month = {04},
+    url = {https://slim.gatech.edu/Publications/Public/Submitted/2021/kumar2021SEGeuq/kumar2021SEGeuq.pdf},
+    author = {Rajiv Kumar and Maria Kotsi and Ali Siahkoohi and Alison Malcolm}
+}
+```
+
+
 ## Author
 
 Rajiv Kumar and Ali Siahkoohi (alisk@gatech.edu)

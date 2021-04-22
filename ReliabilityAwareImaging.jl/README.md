@@ -39,6 +39,22 @@ To perform conditional (posterior) sampling via the pretrained normalizing flow 
 $ julia scripts/test_hint_imaging.jl
 ```
 
+## Citation
+
+If you find the code in this repository useful in your research, please cite:
+
+
+```bibtex
+@unpublished {siahkoohi2021SEGlbe,
+    title = {Learning by example: fast reliability-aware seismic imaging with normalizing flows},
+    year = {2021},
+    month = {04},
+    url = {https://arxiv.org/pdf/2104.06255.pdf},
+    author = {Ali Siahkoohi and Felix J. Herrmann}
+}
+```
+
+
 ## Author
 
 Ali Siahkoohi (alisk@gatech.edu)
