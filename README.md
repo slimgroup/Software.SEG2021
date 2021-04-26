@@ -17,3 +17,6 @@ Enabling uncertainty quantification for seismic data pre-processing using normal
 * [WorkflowWLRLand.jl](https://github.com/slimgroup/Software.SEG2021/tree/main/WorkflowWLRLand.jl):
 A practical workflow for land seismic wavefield recovery with weighted matrix factorization
 
+## Cite
+
+If you find any software in this repository useful, we would appreciate it if you cite the abstract (following the citation in the corresponding folder) and star our repository.
