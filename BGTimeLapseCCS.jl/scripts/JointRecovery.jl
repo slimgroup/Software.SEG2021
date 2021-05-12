@@ -106,7 +106,7 @@ function dip(x,n;k=20)
     end
     mask = convert(Array{Float32},imfilter(mask,Kernel.gaussian(20)))
     image_f1 = mask .* image_f
-    image_out = vec(real.(ifft(ifftshift(image_f1)))[:,1:n[2]])+vec(real.(ifft(ifftshift(image_f1)))[:,end:-1:n[2]+1])/2f0
+    image_out = (vec(real.(ifft(ifftshift(image_f1)))[:,1:n[2]])+vec(real.(ifft(ifftshift(image_f1)))[:,end:-1:n[2]+1]))/2f0
     return image_out
 end
 
