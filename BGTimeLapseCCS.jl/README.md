@@ -36,7 +36,9 @@ Note: We use a 3rd party library, [CurveLab](http://www.curvelet.org), for forwa
 
 ## Reproduce the examples
 
-Examples are in the `script` folder. A proper order to run the examples is: first run *TwoPhase.jl* to generate CO2 concentration by two-phase flow simulation, then run *MakeTimeLapseV.jl* to convert CO2 concentration percentage to time-lapse velocity models through Patchy saturation model, next run *GenerateData.jl* to generate seismic data through wave-equation, and finally, run *IndependentRecoveryX.jl* to recover the image for each vintage independently, and run *JointRecovery.jl* to recover the images for each vintage jointly through joint recovery model. A script *PlotResults.jl* is also provided to plot the results through PyPlot.
+Examples in the SEG abstract are in the `script` folder. A proper order to run the examples is: first run *TwoPhase.jl* to generate CO2 concentration by two-phase flow simulation, then run *MakeTimeLapseV.jl* to convert CO2 concentration percentage to time-lapse velocity models through Patchy saturation model, next run *GenerateData.jl* to generate seismic data through wave-equation, and finally, run *IndependentRecoveryX.jl* to recover the image for each vintage independently, and run *JointRecovery.jl* to recover the images for each vintage jointly through joint recovery model. A script *PlotResults.jl* is also provided to plot the results through PyPlot.
+
+The `notebooks` folder provides some instructions on how to build the permeability/porosity model on the BG Compass model, representative for the North Sea region. The conversions there might not be the same as used in the SEG abstract.
 
 ## Citation
 
@@ -54,6 +56,8 @@ If you find the software useful in your research, we would appreciate it if you 
   software = {https://github.com/slimgroup/Software.SEG2021}
 }
 ```
+
+Also we would appreciate it if you star our repository.
 
 ## Author
 
