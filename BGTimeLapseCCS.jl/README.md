@@ -1,8 +1,8 @@
 # BGTimeLapseCCS.jl
 
-Experiments for "[Compressive time-lapse seismic monitoring of carbon storage and sequestration with the joint recovery model](https://slim.gatech.edu/Publications/Public/Submitted/2021/yin2021SEGcts/yin2021SEGcts.html)", submitted to the [SEG 2021 Annual Meeting](https://seg.org/AM/).
+Experiments for "[Compressive time-lapse seismic monitoring of carbon storage and sequestration with the joint recovery model](https://slim.gatech.edu/Publications/Public/Submitted/2021/yin2021SEGcts/yin2021SEGcts.html)", accepted by [International Meeting for Applied Geoscience & Energy (IMAGE) 2021](https://imageevent.org) as a 20-min talk.
 
-Our examples are mainly based on 3 open-source software packages, [FwiFlow](https://github.com/lidongzh/FwiFlow.jl) for two-phase flow simulation (in Julia), and [JUDI](https://github.com/slimgroup/JUDI.jl) for wave-equation simulation (in Julia), which uses the highly optimized time-domain finite-difference propagators from [Devito](https://www.devitoproject.org) (in Python 3). The joint recovery framework is inplemented in JUDI.
+Our examples are mainly based on 3 open-source software packages, [FwiFlow](https://github.com/lidongzh/FwiFlow.jl) for two-phase flow simulation (in Julia), and [JUDI](https://github.com/slimgroup/JUDI.jl) for wave-equation simulation (in Julia), which uses the highly optimized time-domain finite-difference propagators from [Devito](https://www.devitoproject.org) (in Python 3). The joint recovery framework is inplemented in JUDI. We greatly appreciate the support from developers of these packages.
 
 ## Installation
 
@@ -38,21 +38,20 @@ Note: We use a 3rd party library, [CurveLab](http://www.curvelet.org), for forwa
 
 Examples in the SEG abstract are in the `script` folder. A proper order to run the examples is: first run *TwoPhase.jl* to generate CO2 concentration by two-phase flow simulation, then run *MakeTimeLapseV.jl* to convert CO2 concentration percentage to time-lapse velocity models through Patchy saturation model, next run *GenerateData.jl* to generate seismic data through wave-equation, and finally, run *IndependentRecoveryX.jl* to recover the image for each vintage independently, and run *JointRecovery.jl* to recover the images for each vintage jointly through joint recovery model. A script *PlotResults.jl* is also provided to plot the results through PyPlot.
 
-The `notebooks` folder provides some instructions on how to build the permeability/porosity model on the BG Compass model, representative for the North Sea region. The conversions there might not be the same as used in the SEG abstract.
-
 ## Citation
 
 If you find the software useful in your research, we would appreciate it if you use the citation below.
 
 ```latex
-@UNPUBLISHED{yin2021SEGcts,
+@conference{yin2021SEGcts,
   author = {Ziyi Yin and Mathias Louboutin and Felix J. Herrmann},
   title = {Compressive time-lapse seismic monitoring of carbon storage and sequestration with the joint recovery model},
+  booktitle = {Accepted by International Meeting for Applied Geoscience and Energy (IMAGE) 2021},
   year = {2021},
-  month = {04},
+  month = {06},
   keywords = {compressive sensing, joint recovery method, imaging, CCS, marine, time-lapse},
-  note = {Submitted to SEG 2021},
-  url = {https://slim.gatech.edu/Publications/Public/Submitted/2021/yin2021SEGcts/yin2021SEGcts.html},
+  note = {(SEG, just accepted)},
+  url = {https://slim.gatech.edu/Publications/Public/Conferences/SEG/2021/yin2021SEGcts/yin2021SEGcts.html},
   software = {https://github.com/slimgroup/Software.SEG2021}
 }
 ```
