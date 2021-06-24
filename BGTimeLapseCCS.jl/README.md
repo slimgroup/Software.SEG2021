@@ -36,7 +36,7 @@ Note: We use a 3rd party library, [CurveLab](http://www.curvelet.org), for forwa
 
 ## Reproduce the examples
 
-Examples in the SEG abstract are in the `script` folder. A proper order to run the examples is: first run *TwoPhase.jl* to generate CO2 concentration by two-phase flow simulation, then run *MakeTimeLapseV.jl* to convert CO2 concentration percentage to time-lapse velocity models through Patchy saturation model, next run *GenerateData.jl* to generate seismic data through wave-equation, and finally, run *IndependentRecoveryX.jl* to recover the image for each vintage independently, and run *JointRecovery.jl* to recover the images for each vintage jointly through joint recovery model. A script *PlotResults.jl* is also provided to plot the results through PyPlot.
+Examples in the SEG abstract are in the `script` folder. A proper order to run the examples is: first run *MakePermPoro.jl* to convert acoustic velocity to permeability and porosity, then run *TwoPhase.jl* to generate CO2 concentration by two-phase flow simulation, then run *MakeTimeLapseV.jl* to convert CO2 concentration percentage to time-lapse velocity models through Patchy saturation model, next run *GenerateData.jl* to generate seismic data through wave-equation, and finally, run *IndependentRecoveryX.jl* to recover the image for each vintage independently, and run *JointRecovery.jl* to recover the images for each vintage jointly through joint recovery model. A script *PlotResults.jl* is also provided to plot the results through PyPlot.
 
 ## Citation
 
