@@ -121,9 +121,9 @@ const SRC_CONST = 86400.0 #
 const GRAV_CONST = 9.8    # gravity constant
 
 # Hyperparameter for flow simulation
-NT  = 1826*4
-dt_survey = 273*4
-Δt = 5.0 # day
+NT  = 1826
+dt_survey = 273
+Δt = 20.0 # day
 
 survey_indices = collect(1:dt_survey:NT+1)[1:5]
 n_survey = length(survey_indices)
