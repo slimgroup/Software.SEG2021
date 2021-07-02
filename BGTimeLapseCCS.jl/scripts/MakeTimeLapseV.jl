@@ -8,6 +8,7 @@ using DrWatson
 using PyPlot
 using Random, Images, JLD2, LinearAlgebra
 using JOLI, Statistics, FFTW
+using JUDI
 
 JLD2.@load "../model/bgSlice.jld2" v rho d
 JLD2.@load "../data/bgCO2.jld2" conc
