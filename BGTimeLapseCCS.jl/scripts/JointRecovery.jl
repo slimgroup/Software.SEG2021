@@ -171,22 +171,15 @@ for  j=1:niter
 	@printf("At iteration %d function value is %2.2e \n", j, phi)
 	flush(Base.stdout)
 	
+	global z -= t*g
+	C_z = [C*z[i] for i = 1:L+1]
 	if j == 1
-		global z[1] -= t*g[1]
-		C_z1 = C*z[1]
-		global lambda[1] = quantile(abs.(vec(C_z1)), .9)
-		global x[1] = adjoint(C)*soft_thresholding(C_z1, lambda[1])
-	else
-		global z -= t*g
-		C_z = [C*z[i] for i = 1:L+1]
-		if j == 2
-			for k = 2:L+1
-				global lambda[k] = quantile(abs.(vec(C_z[k])), .9) # estimate thresholding parameter at 2nd iteration
-			end
+		for k = 1:L+1
+			global lambda[k] = quantile(abs.(vec(C_z[k])), .9) # estimate thresholding parameter at 1st iteration
 		end
-		# Update variables and save snapshot
-		global x = [adjoint(C)*soft_thresholding(C_z[i], lambda[i]) for i = 1:L+1]
 	end
+	# Update variables and save snapshot
+	global x = [adjoint(C)*soft_thresholding(C_z[i], lambda[i]) for i = 1:L+1]
 
     JLD2.@save "../results/JointRecovIter$(j).jld2" x z g lambda phi t
 end
