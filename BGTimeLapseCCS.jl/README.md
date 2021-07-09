@@ -36,7 +36,7 @@ Note: We use a 3rd party library, [CurveLab](http://www.curvelet.org), for forwa
 
 ## Reproduce the examples
 
-Examples in the SEG abstract are in the `script` folder. A proper order to run the examples is: first run *MakePermPoro.jl* to convert acoustic velocity to permeability and porosity, then run *TwoPhase.jl* to generate CO2 concentration by two-phase flow simulation, then run *MakeTimeLapseV.jl* to convert CO2 concentration percentage to time-lapse velocity models through Patchy saturation model, next run *GenerateData.jl* to generate seismic data through wave-equation, and finally, run *IndependentRecoveryX.jl* to recover the image for each vintage independently, and run *JointRecovery.jl* to recover the images for each vintage jointly through joint recovery model. A script *PlotResults.jl* is also provided to plot the results through PyPlot.
+Examples in the SEG abstract are in the `script` folder. A proper order to run the examples is: first run *GetBGSlice.jl* to download the BG Compass dataset and take out the 2D slice used in the numerical experiment, then run *MakePermPoro.jl* to convert acoustic velocity to permeability and porosity, then run *TwoPhase.jl* to generate CO2 concentration by two-phase flow simulation, then run *MakeTimeLapseV.jl* to convert CO2 concentration percentage to time-lapse velocity models through Patchy saturation model, next run *GenerateData.jl* to generate seismic data through wave-equation, and finally, run *IndependentRecoveryX.jl* to recover the image for each vintage independently, OR run *JointRecovery.jl* to recover the images for each vintage jointly through joint recovery model. A script *PlotResults.jl* is also provided to plot the results through PyPlot.
 
 ## Citation
 
@@ -57,6 +57,12 @@ If you find the software useful in your research, we would appreciate it if you 
 ```
 
 Also we would appreciate it if you star our repository.
+
+## LICENSE
+
+Please refer to the MIT license in this repository. In addition, please also refer to the license of the BG Compass model from the BG group:
+
+The material provided is an synthetic and fictional dataset for testing purposes. Any similarity or resemblance to any location is entirely coincidental and unintentional. Accordingly, BG Group makes no representation or warranty, express or implied, in respect to the quality, accuracy or usefulness of such data.  The data is supplied with the explicit understanding and agreement of recipient that any action taken or expenditure made by recipient based on its examination, evaluation, interpretation or use of the data is at its own risk and responsibility. 
 
 ## Author
 
