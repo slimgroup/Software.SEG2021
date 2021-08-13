@@ -14,6 +14,7 @@ using Distributions
 using Statistics
 using InvertibleNetworks
 using PyPlot: Figure
+using CUDA
 
 import DrWatson: _wsave
 import Distributions: logpdf, gradlogpdf

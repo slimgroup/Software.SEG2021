@@ -4,11 +4,15 @@
 
 export loss_supervised
 
+
 function loss_supervised(
-    Net::NetworkConditionalHINT, X::AbstractArray{Float32,4}, Y::AbstractArray{Float32,4}
+    Net::NetworkConditionalHINT,
+    X::AbstractArray{Float32,4},
+    Y::AbstractArray{Float32,4}
 )
 
     Zx, Zy, logdet = Net.forward(X, Y)
+    CUDA.reclaim()
     z_size = size(Zx)
 
     f = sum(logpdf(0f0, 1f0, Zx))
@@ -19,6 +23,7 @@ function loss_supervised(
     ΔZy = -gradlogpdf(0f0, 1f0, Zy)/z_size[4]
 
     ΔX, ΔY = Net.backward(ΔZx, ΔZy, Zx, Zy)[1:2]
+    CUDA.reclaim()
     GC.gc()
 
     return -f/z_size[4], ΔX, ΔY

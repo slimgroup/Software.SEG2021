@@ -15,6 +15,7 @@ using LinearAlgebra
 using Distributions
 using Statistics
 using InvertibleNetworks
+using CUDA
 
 import Base.getindex
 import Distributions: logpdf, gradlogpdf
