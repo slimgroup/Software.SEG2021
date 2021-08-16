@@ -1,4 +1,4 @@
-name = "BGTimeLapseCCS"
+name = "CompassTimeLapseCCS"
 authors = ["Ziyi Yin and contributors"]
 
 [deps]

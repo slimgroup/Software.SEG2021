@@ -2,11 +2,11 @@
 ## author: Ziyi Yin (ziyi.yin@gatech.edu)
 
 using DrWatson
-@quickactivate "BGTimeLapseCCS"
+@quickactivate "CompassTimeLapseCCS"
 
 using PyPlot, JUDI, JLD2, LinearAlgebra, Statistics, Images, Flux
 
-JLD2.@load "../model/bgTimeLapse.jld2"
+JLD2.@load "../model/CompassTimeLapse.jld2"
 
 model0_stack = [Model(n,d,o,m0_stack[i]; nb = 100) for i = 1:num_vintage]
 

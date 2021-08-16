@@ -1,7 +1,7 @@
-## Ziyi Yin converted the BG velocity model to permeability and porosity
+## Ziyi Yin converted the Compass velocity model to permeability and porosity
 
 using DrWatson
-@quickactivate "BGTimeLapseCCS"
+@quickactivate "CompassTimeLapseCCS"
 
 using Random, PyPlot
 using LinearAlgebra, JLD2, MAT, Images, FFTW
@@ -9,7 +9,7 @@ using LinearAlgebra, JLD2, MAT, Images, FFTW
 n = (637, 82)
 d = (25.0f0, 25.0f0)
 
-JLD2.@load "../model/bgSlice.jld2" v rho d # original Vp in 25m, 6m grid spacing
+JLD2.@load "../model/CompassSlice.jld2" v rho d # original Vp in 25m, 6m grid spacing
 
 function find_water_bottom(m::AbstractArray{avDT,2};eps = 1e-4) where {avDT}
   #return the indices of the water bottom of a seismic image

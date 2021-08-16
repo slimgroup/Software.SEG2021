@@ -3,7 +3,7 @@
 
 
 using DrWatson
-@quickactivate "BGTimeLapseCCS"
+@quickactivate "CompassTimeLapseCCS"
 using TimeProbeSeismic
 using JLD2, FFTW, DSP, PyPlot, Images
 

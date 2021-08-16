@@ -3,15 +3,15 @@
 ## Ziyi Yin followed the example in FwiFlow software, developed by Dongzhuo Li and Kailai Xu, from the publication https://doi.org/10.1029/2019WR027032
 
 using DrWatson
-@quickactivate "BGTimeLapseCCS"
+@quickactivate "CompassTimeLapseCCS"
 
 using PyPlot
 using Random, Images, JLD2, LinearAlgebra
 using JOLI, Statistics, FFTW
 using JUDI
 
-JLD2.@load "../model/bgSlice.jld2" v rho d
-JLD2.@load "../data/bgCO2.jld2" conc
+JLD2.@load "../model/CompassSlice.jld2" v rho d
+JLD2.@load "../data/CompassCO2.jld2" conc
 
 n = (1590, 205)
 o = (0f0, 0f0)
@@ -110,4 +110,4 @@ end
 
 dm_stack = [vec(m_stack[i]-m0_stack[i]) for i = 1:num_vintage]
 
-JLD2.@save "../model/bgTimeLapse.jld2" num_vintage n d o idx_wb m0_stack dm_stack m_stack
+JLD2.@save "../model/CompassTimeLapse.jld2" num_vintage n d o idx_wb m0_stack dm_stack m_stack

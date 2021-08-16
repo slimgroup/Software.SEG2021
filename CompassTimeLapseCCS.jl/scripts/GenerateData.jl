@@ -2,14 +2,14 @@
 ## author: Ziyi Yin (ziyi.yin@gatech.edu)
 
 using DrWatson
-@quickactivate "BGTimeLapseCCS"
+@quickactivate "CompassTimeLapseCCS"
 
 using PyPlot, JUDI
 using JLD2, LinearAlgebra
 using JOLI, FFTW
 using Printf, Statistics
 
-JLD2.@load "../model/bgTimeLapse.jld2"
+JLD2.@load "../model/CompassTimeLapse.jld2"
 JLD2.@load "../model/MarineSourceLoc.jld2" xrec_stack zrec_stack
 JLD2.@load "../model/OBN.jld2" OBN_loc
 

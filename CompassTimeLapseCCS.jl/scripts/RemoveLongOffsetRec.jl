@@ -2,7 +2,7 @@
 ## author: Ziyi Yin (ziyi.yin@gatech.edu)
 
 using DrWatson
-@quickactivate "BGTimeLapseCCS"
+@quickactivate "CompassTimeLapseCCS"
 
 using PyPlot, JLD2, JUDI
 

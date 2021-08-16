@@ -1,9 +1,9 @@
-### Read the 3D BG Compass slice from SLIM website and take out the 2D slice
-## Please refer to the details in the MIT license of this repository and in the license of the BG Compass model
+### Read the 3D Compass slice from SLIM website and take out the 2D slice
+## Please refer to the details in the MIT license of this repository and in the license of the Compass model
 ## author: Ziyi Yin (ziyi.yin@gatech.edu)
 
 using DrWatson
-@quickactivate "BGTimeLapseCCS"
+@quickactivate "CompassTimeLapseCCS"
 
 using PyPlot
 using SegyIO
@@ -71,4 +71,4 @@ rho = rho_nogas[:,300,:]
 
 d = (25f0,6f0)
 
-JLD2.@save "../model/bgSlice.jld2" v rho d
+JLD2.@save "../model/CompassSlice.jld2" v rho d

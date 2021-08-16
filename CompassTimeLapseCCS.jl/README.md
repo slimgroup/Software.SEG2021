@@ -1,4 +1,4 @@
-# BGTimeLapseCCS.jl
+# CompassTimeLapseCCS.jl
 
 Experiments for "[Compressive time-lapse seismic monitoring of carbon storage and sequestration with the joint recovery model](https://slim.gatech.edu/Publications/Public/Submitted/2021/yin2021SEGcts/yin2021SEGcts.html)", accepted by [International Meeting for Applied Geoscience & Energy (IMAGE) 2021](https://imageevent.org) as a 20-min talk.
 
@@ -10,7 +10,7 @@ To start running the examples, clone the repository:
 
 ```bash
 git clone https://github.com/slimgroup/Software.SEG2021
-cd Software.SEG2021/BGTimeLapseCCS.jl/
+cd Software.SEG2021/CompassTimeLapseCCS.jl/
 ```
 
 To reproduce the examples, first install [Julia](https://julialang.org/downloads/) and [Python](https://www.python.org/downloads/). A Julia version <= 1.3 is currently suggested by developers of [FwiFlow](https://github.com/lidongzh/FwiFlow.jl).
@@ -26,17 +26,17 @@ Then, open a julia console and do
 
 ```julia
 using Pkg
-Pkg.activate("BGTimeLapseCCS")
+Pkg.activate("CompassTimeLapseCCS")
 Pkg.instantiate()
 ```
 
 This will install all necessary packages in julia.
 
-Note: We use a 3rd party library, [CurveLab](http://www.curvelet.org), for forward and adjoint curvelet transforms, which has been incorporated into Julia by [JOLI](https://github.com/slimgroup/JOLI.jl). Please follow the instruction in the README.md in [JOLI](https://github.com/slimgroup/JOLI.jl) to properly download it. You may also try other types of sparsifying transform as you need.
+Note: We use a 3rd party library, [CurveLab](http://www.curvelet.org), for forward and adjoint curvelet transforms, which has been incorporated into Julia by [JOLI](https://github.com/slimgroup/JOLI.jl). SLIM version of Curvelab 2.1.2 can be obtained at [http://www.curvelet.org/download.html](http://www.curvelet.org/download.html). You may also try other types of sparsifying transform (Fourier/wavelet/...) as you need.
 
 ## Reproduce the examples
 
-Examples in the SEG abstract are in the `script` folder. A proper order to run the examples is: first run *GetBGSlice.jl* to download the BG Compass dataset and take out the 2D slice used in the numerical experiment, then run *MakePermPoro.jl* to convert acoustic velocity to permeability and porosity, then run *TwoPhase.jl* to generate CO2 concentration by two-phase flow simulation, then run *MakeTimeLapseV.jl* to convert CO2 concentration percentage to time-lapse velocity models through Patchy saturation model, next run *GenerateData.jl* to generate seismic data through wave-equation, and finally, run *IndependentRecoveryX.jl* to recover the image for each vintage independently, OR run *JointRecovery.jl* to recover the images for each vintage jointly through joint recovery model. A script *PlotResults.jl* is also provided to plot the results through PyPlot.
+Examples in the SEG abstract are in the `script` folder. A proper order to run the examples is: first run *GetCompassSlice.jl* to download the 3D Compass dataset and take out the 2D slice used in the numerical experiment, then run *MakePermPoro.jl* to convert acoustic velocity to permeability and porosity, then run *TwoPhase.jl* to generate CO2 concentration by two-phase flow simulation, then run *MakeTimeLapseV.jl* to convert CO2 concentration percentage to time-lapse velocity models through Patchy saturation model, next run *GenerateData.jl* to generate seismic data through wave-equation, and run *RemoveLongOffsetRec.jl* to cut the long-offset data, and finally, run *IndependentRecoveryX.jl* to recover the image for each vintage independently, OR run *JointRecovery.jl* to recover the images for each vintage jointly through joint recovery model. A script *PlotResults.jl* is also provided to plot the results through PyPlot.
 
 ## Citation
 
@@ -60,7 +60,7 @@ Also we would appreciate it if you star our repository.
 
 ## LICENSE
 
-Please refer to the MIT license in this repository. In addition, please also refer to the license of the BG Compass model from the BG group:
+Please refer to the MIT license in this repository. In addition, please also refer to the license of the Compass model:
 
 The material provided is an synthetic and fictional dataset for testing purposes. Any similarity or resemblance to any location is entirely coincidental and unintentional. Accordingly, BG Group makes no representation or warranty, express or implied, in respect to the quality, accuracy or usefulness of such data.  The data is supplied with the explicit understanding and agreement of recipient that any action taken or expenditure made by recipient based on its examination, evaluation, interpretation or use of the data is at its own risk and responsibility. 
 

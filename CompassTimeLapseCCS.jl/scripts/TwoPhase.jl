@@ -1,10 +1,10 @@
 ### Two-phase flow simulation on BG compass model
 
-## Ziyi Yin converted the BG velocity model to permeability and porosity
+## Ziyi Yin converted the Compass velocity model to permeability and porosity
 ## The simulation is done with FwiFlow software, developed by Dongzhuo Li and Kailai Xu, from the publication https://doi.org/10.1029/2019WR027032
 
 using DrWatson
-@quickactivate "BGTimeLapseCCS"
+@quickactivate "CompassTimeLapseCCS"
 
 using Pkg
 Pkg.build("ADCME")
@@ -159,4 +159,4 @@ out_sw_true, out_p_true = imseq(tfCtxTrue)
 sess = Session(); init(sess)
 @time conc = sess.run(out_sw_true[survey_indices], Dict(qw=>qw_value,qo=>qo_value))
 
-JLD2.@save "../data/bgCO2.jld2" conc
+JLD2.@save "../data/CompassCO2.jld2" conc

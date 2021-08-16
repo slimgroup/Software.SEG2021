@@ -1,15 +1,15 @@
-### Independent recovery on vintage 5
+### Independent recovery on vintage 3
 ## author: Ziyi Yin (ziyi.yin@gatech.edu)
 
 using DrWatson
-@quickactivate "BGTimeLapseCCS"
+@quickactivate "CompassTimeLapseCCS"
 using TimeProbeSeismic
 using JLD2, FFTW, DSP, PyPlot, Images
 
-JLD2.@load "../model/bgTimeLapse.jld2"
+JLD2.@load "../model/CompassTimeLapse.jld2"
 JLD2.@load "../data/d_lin_cut.jld2" d_lin_cut q
 
-nv = 5
+nv = 3
 
 isdir("../results") || mkdir("../results")
 
