@@ -5,7 +5,7 @@ This repository contains codes to reproduce results in abstracts submitted to th
 
 ## Abstracts with code
 
-* [BGTimeLapseCCS.jl](https://github.com/slimgroup/Software.SEG2021/tree/main/BGTimeLapseCCS.jl):
+* [CompassTimeLapseCCS.jl](https://github.com/slimgroup/Software.SEG2021/tree/main/CompassTimeLapseCCS.jl):
 Compressive time-lapse seismic monitoring of carbon storage and sequestration with the joint recovery model
 
 * [ReliabilityAwareImaging.jl](https://github.com/slimgroup/Software.SEG2021/tree/main/ReliabilityAwareImaging.jl):
