@@ -17,7 +17,7 @@ Random.seed!(1234);
 # adjoint(A)*b
 *(A::joLinearFunction, v::Array{Array{Float32,1},1}) = A.fop(v)
 
-JLD2.@load "../model/bgTimeLapse.jld2"
+JLD2.@load "../model/CompassTimeLapse.jld2"
 JLD2.@load "../data/d_lin_cut.jld2" d_lin_cut q
 
 model0_stack = [Model(n,d,o,m0_stack[i]; nb=100) for i = 1:num_vintage]

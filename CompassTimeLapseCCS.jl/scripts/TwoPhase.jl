@@ -1,4 +1,4 @@
-### Two-phase flow simulation on BG compass model
+### Two-phase flow simulation on Compass model
 
 ## Ziyi Yin converted the Compass velocity model to permeability and porosity
 ## The simulation is done with FwiFlow software, developed by Dongzhuo Li and Kailai Xu, from the publication https://doi.org/10.1029/2019WR027032
