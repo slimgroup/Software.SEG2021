@@ -10,7 +10,7 @@ using SegyIO
 run(`wget -r ftp://slim.gatech.edu/data//synth/Compass`) # this might take a while
 
 # get velocity
-block = segy_read("slim.gatech.edu/final_velocity_model_ieee_6m.sgy")
+block = segy_read("slim.gatech.edu/data/synth/Compass/final_velocity_model_ieee_6m.sgy")
 
 # original compass model is in 25m*25m*6m
 n1 = (1911,2730,341)
@@ -43,7 +43,7 @@ end
 v = v_nogas[:,300,:]
 
 # get density
-block1 = segy_read("slim.gatech.edu/final_density_model_ieee_6m.sgy")
+block1 = segy_read("slim.gatech.edu/data/synth/Compass/final_density_model_ieee_6m.sgy")
 
 sx = get_header(block1, "SourceX")
 sy = get_header(block1, "SourceY")
