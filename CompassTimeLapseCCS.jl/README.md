@@ -1,6 +1,6 @@
 # CompassTimeLapseCCS.jl
 
-Experiments for "[Compressive time-lapse seismic monitoring of carbon storage and sequestration with the joint recovery model](https://slim.gatech.edu/Publications/Public/Submitted/2021/yin2021SEGcts/yin2021SEGcts.html)", accepted by [International Meeting for Applied Geoscience & Energy (IMAGE) 2021](https://imageevent.org) as a 20-min talk.
+Experiments for "[Compressive time-lapse seismic monitoring of carbon storage and sequestration with the joint recovery model](https://slim.gatech.edu/content/compressive-time-lapse-seismic-monitoring-carbon-storage-and-sequestration-joint-recovery)", accepted by [International Meeting for Applied Geoscience & Energy (IMAGE) 2021](https://imageevent.org) as a 20-min talk.
 
 Our examples are mainly based on 3 open-source software packages, [FwiFlow](https://github.com/lidongzh/FwiFlow.jl) for two-phase flow simulation (in Julia), and [JUDI](https://github.com/slimgroup/JUDI.jl) for wave-equation simulation (in Julia), which uses the highly optimized time-domain finite-difference propagators from [Devito](https://www.devitoproject.org) (in Python 3). The joint recovery framework is inplemented in JUDI. We greatly appreciate the support from developers of these packages.
 
@@ -43,16 +43,21 @@ Examples in the SEG abstract are in the `script` folder. A proper order to run t
 If you find the software useful in your research, we would appreciate it if you use the citation below.
 
 ```latex
-@conference{yin2021SEGcts,
-  author = {Ziyi Yin and Mathias Louboutin and Felix J. Herrmann},
-  title = {Compressive time-lapse seismic monitoring of carbon storage and sequestration with the joint recovery model},
-  booktitle = {Accepted by International Meeting for Applied Geoscience and Energy (IMAGE) 2021},
-  year = {2021},
-  month = {06},
-  keywords = {compressive sensing, joint recovery method, imaging, CCS, marine, time-lapse},
-  note = {(SEG, just accepted)},
-  url = {https://slim.gatech.edu/Publications/Public/Conferences/SEG/2021/yin2021SEGcts/yin2021SEGcts.html},
-  software = {https://github.com/slimgroup/Software.SEG2021}
+@conference {yin2021SEGcts,
+	title = {Compressive time-lapse seismic monitoring of carbon storage and sequestration with the joint recovery model},
+	booktitle = {SEG Technical Program Expanded Abstracts},
+	year = {2021},
+	note = {(IMAGE, Denver)},
+	month = {09},
+	pages = {3434-3438},
+	abstract = {Time-lapse seismic monitoring of carbon storage and sequestration is often challenging because the time-lapse signature of the growth of CO2 plumes is weak in amplitude and therefore difficult to detect seismically. This situation is compounded by the fact that the surveys are often coarsely sampled and not replicated to reduce costs. As a result, images obtained for different vintages (baseline and monitor surveys) often contain artifacts that may be attributed wrongly to time-lapse changes. To address these issues, we propose to invert the baseline and monitor surveys jointly. By using the joint recovery model, we exploit information shared between multiple time-lapse surveys. Contrary to other time-lapse methods, our approach does not rely on replicating the surveys to detect time-lapse changes. To illustrate this advantage, we present a numerical sensitivity study where CO2 is injected in a realistic synthetic model. This model is representative of the geology in the southeast of the North Sea, an area currently considered for carbon sequestration. Our example demonstrates that the joint recovery model improves the quality of time-lapse images allowing us to monitor the CO2 plume seismically.},
+	keywords = {CCS, Compressive Sensing, Imaging, JRM, marine, SEG, time-lapse},
+	doi = {10.1190/segam2021-3569087.1},
+	url = {https://slim.gatech.edu/Publications/Public/Conferences/SEG/2021/yin2021SEGcts/yin2021SEGcts.html},
+	presentation = {https://slim.gatech.edu/Publications/Public/Conferences/SEG/2021/yin2021SEGcts/Tue-9-28-Yin.html},
+	url2 = {https://slim.gatech.edu/Publications/Public/Conferences/SEG/2021/yin2021SEGcts/yin2021SEGcts.mp4},
+	software = {https://github.com/slimgroup/Software.SEG2021},
+	author = {Ziyi Yin and Mathias Louboutin and Felix J. Herrmann}
 }
 ```
 
